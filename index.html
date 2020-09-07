@@ -1,37 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Project 3 FEWD</title>
-    <meta name="viewport" href="width=devicewidth. initial-scale=1">
+    <meta name="viewport" content="width=devicewidth, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet" >
+    <link href="styles.css" rel="stylesheet">
   </head>
 <body>
   <header class="banner">
     <h1>THE CODE REVIEW</h1>
   </header>
-  <form>
+  <form action="index.html" method="post">
     <div class="intro">
     <h3>Signup for our newsletter</h3>
       <p>Get the latest news on how your code is doing right in your inbox</p>
     </div>
     <hr class="hr1">
     <hr>
-    <fieldset>
+    <fieldset class="info">
       <legend>Contact Information</legend>
+      <div class="couple">
         <label for="name">Full Name</label>
-          <input type="text" id="name" name="full_name" placeholder="Required">
+          <input required type="text" id="name" name="full_name" placeholder="Required">
+      </div>
+      <div class="couple">
         <label for="mail">Email Address</label>
-          <input type="email" id="mail" name="email_address" placeholder="Required">
+          <input required type="email" id="mail" name="email_address" placeholder="Required">
+      </div>
+      <div class="couple">
         <label for="tel">Phone Number</label>
-          <input type="tel" id="tel" name="phone_number">
+          <input type="tel" id="tel" name="phone_number" placeholder="123-456-789"
+  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+</div>
+      <div class="couple">
         <label for="street_address">Street Address</label>
-          <input type="text" id="street_address" name="address" placeholder="Required">
+          <input required type="text" id="street_address" name="address" placeholder="Required">
+      </div>
+      <div class="couple">
         <label for="city">City</label>
-          <input type="text" id="city" name="city_address" placeholder="Required">
+          <input required type="text" id="city" name="city_address" placeholder="Required">
+      </div>
+      <div class="couple">
         <label for="state">State</label>
-          <select type="text" id="state" name="state" class="select">
+          <select id="state" name="state" class="select">
             <option value="0">Choose state</option>
                 <option value="AL">Alabama</option>
               	<option value="AK">Alaska</option>
@@ -85,31 +97,34 @@
               	<option value="WI">Wisconsin</option>
               	<option value="WY">Wyoming</option>
             </select>
+      </div>
+      <div class="couple">
         <label for="zipcode">Zip Code</label>
-          <input type="text" id="zipcode" name="zip" placeholder="Required">
+          <input required type="text" id="zipcode" name="zip" placeholder="Required">
+      </div>
       </fieldset>
   <hr>
-      <fieldset class="choices">
+      <fieldset id="choices">
         <legend>Newsletter</legend>
-          <span>Select the newsletters you would like to receive</span>
+          <span><strong>Select the newsletters you would like to receive</strong></span><br>
           <input type="checkbox" id="html_news" value="html" name="news">
-          <label for="html_news" class="check">HTML News</label>
+          <label for="html_news" class="check">HTML News</label><br>
           <input type="checkbox" id="css_news" value="css" name="news">
-          <label for="css_news" class="check">CSS News</label>
+          <label for="css_news" class="check">CSS News</label><br>
           <input type="checkbox" id="javascript_news" value="java" name="news">
-          <label for="javascript_news" class="check">Javascript News</label>
-        <span>Newsletter format</span>
+          <label for="javascript_news" class="check">Javascript News</label><br>
+        <span><strong>Newsletter format</strong></span><br>
           <input type="radio" id="html_format" value="html_format" name="news_format">
-          <label for="html_format" class="check">HTML</label>
+          <label for="html_format" class="check">HTML</label><br>
           <input type="radio" id="plain_text" value="plain" name="news_format">
-          <label for="plain_text" class="check">Plain text</label>
-        <span for="topics" class="other_topics">Other topics you'd like to hear about</span>
+          <label for="plain_text" class="check">Plain text</label><br>
+        <span class="other_topics"><strong>Other topics you'd like to hear about</strong></span>
           <textarea id="topics" name="other_topics"></textarea>
       </fieldset>
         <button type="submit">Sign Up</button>
   </form>
+  <footer>
+    <em class="main_footer">&#169; The Code Review</em>
+  </footer>
 </body>
-<footer>
-  <span class="main_footer">&#169; The Code Review</span>
-</footer>
 </html>

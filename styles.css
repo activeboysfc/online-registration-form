@@ -3,10 +3,8 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
+  min-width: 100%;
+  margin: auto;
   font-family: 'Assistant', sans-serif;
   color: grey;
 }
@@ -18,7 +16,7 @@ body {
 
 h1 {
   width: 100%;
-  margin: 0;
+  margin: 0 ;
   font-weight: 700;
   color: #FF951C;
   text-align: center;
@@ -29,36 +27,50 @@ h1 {
 }
 
 form {
+  margin: 0 auto;
+}
+
+.info
+ {
   display: flex;
   flex-direction: column;
-  align-self: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  border: none;
 }
 
 fieldset {
   border: none;
+  margin: 1.5em 0;
 }
 
-legend,
-label,
-input,
-span,
-textarea {
-  display: flex;
-  width: 85%;
+.check,
+input[type='radio'],
+input[type='checkbox'] {
+  margin: 1em 0;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+select
+ {
+  margin-bottom: 1.5em;
 }
 
 .hr1 {
-  width: 85%;
-  margin-left: 19px;
+  width: 100%;
   margin-bottom: 2px;
   border-top: 5px solid black;
+  padding: 0 0.5em;
 }
 
 hr {
-  width: 85%;
-  margin-left: 19px;
+  width: 100%;
   margin-top: 1px;
   border: 1px solid black;
+  padding: 0 0.5em;
 }
 
 h3,
@@ -68,8 +80,8 @@ legend {
 
 legend {
   font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
-
 
 p {
   margin-top: 0;
@@ -78,17 +90,12 @@ h3 {
   margin-bottom: 0;
 }
 
-span {
-  margin: 1em 0 1em 0;
-}
-
-
 input[type='text'],
 input[type='email'],
 input[type='tel'],
 textarea,
 select {
-  margin: 0;
+  width: 100%;
   padding: 1em;
   border-radius: 0.5em;
   box-shadow: 0 1px 0 #e8eeef inset;
@@ -97,33 +104,66 @@ select {
   border: none;
 }
 
-input[placeholder='Required'] {
+input[placeholder='Required'],
+input[placeholder='123-456-789']
+ {
   text-align: right;
 }
 
 #zipcode {
-  width: 45%;
+  width: 50%;
+  display: block;
 }
 
-label {
-  margin: 1em 0;
+span {
+  margin: 3em 0;
 }
 
 button {
-  align-self: center;
-  width: 90%;
-  background-color: #49709C;
+  width: 100%;
+  margin: 0 auto;
+  flex-grow: 1;
+  background-color: #CEA8A0;
   font-size: 2em;
   text-align: center;
-  color: #E7EBDD;
-  padding: 0.50em 0;
+  color: #787B48;
+  padding: 0.5em 0;
   border: none;
-  border-radius: 0.5em;
+  border-radius: 5px;
 }
 
 .main_footer {
+  display: flex;
   justify-content: center;
   width: 100%;
   margin: 1em 0;
+
+}
+
+@media (min-width: 768px) {
+
+      form{
+        width: 60%;
+      }
+
+    .info, .couple{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .info input,
+    .info select{
+      flex-grow: 1;
+      flex-basis: 75%;
+
+    }
+
+    .info label {
+      flex-basis: 25%;
+    }
+
+    #zipcode {
+      max-width: 35%;
+    }
 
 }
